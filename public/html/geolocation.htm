@@ -1,0 +1,105 @@
+<!-- The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities. -->
+
+
+<!-- Documentation: https://developer.mozilla.org/en-US/docs/Web/API/Navigator -->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div class="latlon">
+    <p>
+      latitude: <span id="latitude"></span><br><br>
+      longitude: <span id="longitude"></span>
+    </p>
+
+  </div>
+
+
+
+  <br>
+  <div class="result">
+    <p>
+      Current Temperature: <span class="ctemp"> </span>&deg;C
+    </p>
+    <p>
+      Maximum_Temperature: <span class='weather'> </span>&deg;C
+    </p>
+    <p>
+      Description: <span class="description"></span>
+    </p>
+    <p>
+      Feels Like=<span class="feelslike"></span>
+    </p>
+    <p>
+      Air Quality Index : <span class="aqi"></span>
+    </p>
+
+
+  </div>
+
+  <div class="current">
+
+    <p>
+      Last Updated: <span class="lupdated"></span>
+    </p>
+
+
+  </div>
+  <div class="map">
+    <div id="mapid"></div>
+  </div>
+  
+
+
+
+  <script>
+    //leaflet//
+    const mymap = L.map('mapid').setView([0, 0], 1);
+
+    // marker -- L.Marker is used to display/draggable icons on the map;
+
+    const marker = L.marker([0, 0]).addTo(mymap);
+
+    const attirbution = '&copy;<a href="https://www.openstreetmap.org/copyright">openstreetmap</a>'
+    const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    const tiles = L.tileLayer(tileUrl, { attirbution });
+
+    tiles.addTo(mymap);
+
+    navigator.geolocation.getCurrentPosition((position) => {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      const LatLng=L.latLng(lat,lon);
+      marker.setLatLng(LatLng);
+      mymap.setView(LatLng,13);
+      
+    });
+
+  
+
+   
+
+  </script>
+  <script src="../Javascript/geolocation.js"></script>
+
+</body>
+
+</html>

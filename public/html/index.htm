@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=
+      , initial-scale=1.0">
+      <title>Lattitude && Longitude</title>
+</head>
+<body>
+      <img src="" alt="" id="rainbow" width="300px">
+
+      <script>
+
+            async function catchRainbow(){
+                  const response=await fetch('rainbow.jpg'); // it do a fetch function and store it in the response variable
+
+                  const blob=await response.blob();
+                  // console.log(blob);
+                  
+                  document.getElementById('rainbow').src=URL.createObjectURL(blob);
+
+            }
+            catchRainbow().catch(err=>{
+                  console.log(err);
+            });
+
+            // fetch('rainbow.jpg').then(res=>{
+            //       // console.log(res);
+            //       return res.blob();
+            // }).then(blob=>{
+            //       // console.log(res);
+
+                  
+            // })
+      </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "fetch_api",
+  "version": "1.0.0",
+  "description": "learning basics of backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chitransh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "leaflet": "^1.7.1",
+    "mongoose": "^5.13.3",
+    "node-fetch": "^2.6.1"
+  }
+}

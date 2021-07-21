@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <style>
+    #mapid {
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Where is the ISS?</h1>
+
+  <P>latitude: <span id="lat"></span></P>
+  <P>longitude: <span id="lon"></span></P>
+
+  <!-- this submit button will save lat and long data to the file  -->
+
+  
+  <script>
+
+
+
+
+   
+    let latitude;
+    let longitude;
+
+    // url of the api of ISS
+
+    const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
+
+    //#############
+
+    // fetch data from iss API;
+    async function getIss() {
+      const response = await fetch(api_url);
+      const data = await response.json();
+      // console.log(data.latitude);
+      // console.log(data.longitude);
+
+
+      // GET VALUES FROM DATA JSON FILE;
+      // const { longitude, latitude } = data;
+
+      latitude = data.latitude;
+      longitude = data.longitude;
+
+      // PUT THE DATA IN TO THE HTML
+      document.getElementById('lat').textContent = latitude;
+
+      document.getElementById('lon').textContent = longitude;
+
+
+
+
+    }
+   
+
+
+
+
+
+
+    getIss();
+  </script>
+</body>
+
+</html>

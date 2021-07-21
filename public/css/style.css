@@ -1,0 +1,96 @@
+
+body{
+  background: linear-gradient(to bottom right,rgb(250, 199, 105), rgb(245, 172, 36));
+  
+  background: url('../img/mosi-knife--PVgDgKXgZA-unsplash.jpg')
+  /* background-repeat: no-repeat; */
+  
+}
+
+
+
+.result{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.result>p{
+  height: 50px;
+  margin: 10px;
+  text-align: justify;
+  background-color: #eee;
+  font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0 10px;
+}
+
+
+
+
+.result>p>span{
+  display: inline-flex;
+  color: rgb(235, 115, 17);
+  font-size: x-large;
+  /* width: 40px; */
+  padding: 10px;
+  
+
+}
+.latlon{
+  display: flex;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  
+}
+
+.latlon>p{
+  background: linear-gradient(to bottom right,rgba(98, 255, 182, 0.562),rgba(34, 190, 130, 0.747));
+  padding: 30px;
+  font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.latlon>p>span{
+  padding: 10px;
+  font-size: x-large;
+}
+.current{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.current>p{
+  height: 50px;
+  text-align: justify;
+  background-color: #eee;
+  font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 10px;
+}
+
+.current>p>span{
+  display: inline-flex;
+  color: rgb(241, 100, 35);
+  font-size: x-large;
+  /* width: 40px; */
+  padding: 10px;
+  
+
+}
+
+.map{
+  display: flex;
+  justify-content: center;
+  
+}
+#mapid{
+  /* display: flex; */
+  height: 800px;
+  width: 1000px;
+  margin: 100px;
+}
