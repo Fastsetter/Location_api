@@ -18,13 +18,8 @@ app.use(express.json());
 
 //  ---------------------- MONGODB CONNECTION -----------------------//
 
-const mongo_url = 'mongodb+srv://Sky:11092005@cluster0.3auvc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-mongodb.connect(mongo_url, { useNewUrlParser: true, useUnifiedTopology: true }, async (err) => {
-      // const arr=await weather.find({});
-      // console.log(arr);
-      if (err) throw err;
-});
-
+const mongo_url = 'mongodb+srv://weather_api:fast8301@cluster0.42r4c.mongodb.net/weather_database?retryWrites=true&w=majority';
+mongodb.connect(mongo_url, { useNewUrlParser: true, useUnifiedTopology: true }).catch(error => handleError(error));
 
 //  ----------------------- ROUTES ---------------------//
 
@@ -94,7 +89,6 @@ app.get('/weather/:latlon', async (req, res) => {
 
       const res_weather = await fetch(weather_url);
       const forecast = await res_weather.json();
-      console.log(forecast);
       res.json(forecast);
 })
 
@@ -117,5 +111,5 @@ app.get('/view-checkins',(req,res)=>{
 // Port//
 
 app.listen(port, () => {
-      console.log(`App is listening at port${port}`);
+      console.log(`Server is listening at http://localhost:${port}`);
 });

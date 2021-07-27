@@ -1,7 +1,12 @@
 <!-- The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities. -->
 
 
+
+
 <!-- Documentation: https://developer.mozilla.org/en-US/docs/Web/API/Navigator -->
+
+
+
 
 <html lang="en">
 
@@ -24,52 +29,84 @@
 
 <body>
 
-  <div class="latlon">
-    <p>
-      latitude: <span id="latitude"></span><br><br>
-      longitude: <span id="longitude"></span>
-    </p>
+  <div class="navbar">
+    <h2 class="heading">Weather Api</h2>
+    <h2>Forecast</h2>
 
+    <input type="text" class="search" placeholder="Search">
+  </div>
+  <div class="rightContainer">
+    <div class="latlon">
+
+      <p>Name: <span id="name"></span></p>
+      <p>Local Time : <span id="time"></span></p>
+      <p>Latitude: <span id="latitude"></span></p>
+      <p>Longitude: <span id="longitude"></span>
+      </p>
+      <p>
+        Last Updated: <span class="lupdated"></span>
+      </p>
+
+      
+    </div>
+  </div>
+
+
+  <div class="leftContainer">
+
+    <div class="temp">
+      <p>
+        Current Temperature : <span class="ctemp"> </span>&deg;C
+      </p>
+      <p>
+        Feels Like = <span class="feelslike"></span>
+      </p>
+      
+      <p>
+        Humidity : <span class="humidity"></span>
+      </p>
+
+      
+    </div>
+    <div class="result">
+      
+      <p>
+        Max Temp: <span class='weather'> </span>&deg;C
+      </p>
+      <p>
+        Description: <span class="description"></span>
+      </p>
+
+      <p>
+        Air Quality Index : <span class="aqi"></span>
+      </p>
+
+      <p>
+        Precipitation: <span class="precip"></span>
+      </p>
+
+      <p>
+        Wind (kph): <span class="wind"></span>
+      </p>
+
+      <div class="opacity"></div>
+
+
+    </div>
+
+
+    
   </div>
 
 
 
-  <br>
-  <div class="result">
-    <p>
-      Current Temperature: <span class="ctemp"> </span>&deg;C
-    </p>
-    <p>
-      Maximum_Temperature: <span class='weather'> </span>&deg;C
-    </p>
-    <p>
-      Description: <span class="description"></span>
-    </p>
-    <p>
-      Feels Like=<span class="feelslike"></span>
-    </p>
-    <p>
-      Air Quality Index : <span class="aqi"></span>
-    </p>
-
-
-  </div>
-
-  <div class="current">
-
-    <p>
-      Last Updated: <span class="lupdated"></span>
-    </p>
-
-
-  </div>
   <div class="map">
     <div id="mapid"></div>
   </div>
-  
 
 
 
+<!-- 
   <script>
     //leaflet//
     const mymap = L.map('mapid').setView([0, 0], 1);
@@ -87,18 +124,22 @@
     navigator.geolocation.getCurrentPosition((position) => {
       const lat = position.coords.latitude;
       const lon = position.coords.longitude;
-      const LatLng=L.latLng(lat,lon);
+      const LatLng = L.latLng(lat, lon);
       marker.setLatLng(LatLng);
-      mymap.setView(LatLng,13);
-      
+      mymap.setView(LatLng, 13);
+
     });
 
-  
 
-   
 
-  </script>
+
+
+  </script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="../Javascript/geolocation.js"></script>
+
+  <script src="../Javascript/animation.js"></script>
 
 </body>
 
