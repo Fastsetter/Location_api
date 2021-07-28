@@ -145,7 +145,7 @@ img{
 
 .temp {
   position: absolute;
-  height: 65vh;
+  height: 65%;
   width: clamp(40%,50%,60%);
   top: 50%;
   left: 50%;
