@@ -186,7 +186,7 @@ img{
 
 
 
-@media screen and (min-width: 655px) {
+@media screen and (max-width: 655px) {
   
   .latlon{
     display: none;
