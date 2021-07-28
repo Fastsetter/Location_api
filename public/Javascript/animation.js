@@ -5,7 +5,7 @@ const latlon=document.querySelector('.latlon');
 
 const rcontainer=document.querySelector('.rightContainer');
 const body=document.querySelector('body');
-
+body.style.height=screen.height;
 const tl=new TimelineMax();
 
 
