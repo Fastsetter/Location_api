@@ -186,7 +186,7 @@ img{
 
 
 
-@media (max-width: 655px) {
+@media screen and (min-width: 655px) {
   
   .latlon{
     display: none;
@@ -194,12 +194,16 @@ img{
   .navbar>.heading{
    display: none;
   }
+  .curve{
+    height: 40%;
+  }
 
 }
 
-@media (max-width:510px){
+@media screen and (max-width:510px){
   .temp{
     width: 80vw;
+    height:50vh;
   }
   img{
     display: none;
