@@ -205,7 +205,7 @@ img{
 @media screen and (max-width:510px){
   .temp{
     width: 80vw;
-    height:50vh;
+    height:50%;
   }
   img{
     display: none;
