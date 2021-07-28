@@ -31,72 +31,72 @@
 
   <div class="navbar">
     <h2 class="heading">Weather Api</h2>
+
     <h2>Forecast</h2>
+    
+
 
     <input type="text" class="search" placeholder="Search">
   </div>
-  <div class="rightContainer">
-    <div class="latlon">
 
-      <p>Name: <span id="name"></span></p>
-      <p>Local Time : <span id="time"></span></p>
-      <p>Latitude: <span id="latitude"></span></p>
-      <p>Longitude: <span id="longitude"></span>
-      </p>
-      <p>
-        Last Updated: <span class="lupdated"></span>
-      </p>
-
-      
-    </div>
-  </div>
-
-
-  <div class="leftContainer">
-
-    <div class="temp">
-      <p>
-        Current Temperature : <span class="ctemp"> </span>&deg;C
-      </p>
-      <p>
-        Feels Like = <span class="feelslike"></span>
-      </p>
-      
-      <p>
-        Humidity : <span class="humidity"></span>
-      </p>
-
-      
-    </div>
-    <div class="result">
-      
-      <p>
-        Max Temp: <span class='weather'> </span>&deg;C
-      </p>
-      <p>
-        Description: <span class="description"></span>
-      </p>
-
-      <p>
-        Air Quality Index : <span class="aqi"></span>
-      </p>
-
-      <p>
-        Precipitation: <span class="precip"></span>
-      </p>
-
-      <p>
-        Wind (kph): <span class="wind"></span>
-      </p>
-
-      <div class="opacity"></div>
-
-
-    </div>
-
-
+  <div class="latlon">
+    Name/Region: <span id="name"></span><br>
+    Latitude: <span id="latitude"></span><br>
+    Longitude: <span id="longitude"></span><br>
+    Country: <span class="country"></span><br>
     
+
   </div>
+
+  <div class="curve">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+      <path fill="#fff" fill-opacity="1"
+        d="M0,160L40,181.3C80,203,160,245,240,245.3C320,245,400,203,480,192C560,181,640,203,720,192C800,181,880,139,960,138.7C1040,139,1120,181,1200,192C1280,203,1360,181,1400,170.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+      </path>
+    </svg>
+
+  </div>
+
+
+
+
+
+
+
+  <div class="temp">
+    <p>
+      Current Temperature : <span class="ctemp"> </span>&deg;C
+    </p>
+    <p>
+      Feels Like = <span class="feelslike"></span>
+    </p>
+
+    <p>
+      Humidity : <span class="humidity"></span>
+    </p>
+    <p>
+      Max Temp: <span class='weather'> </span>&deg;C
+    </p>
+    <p>
+      Description: <span class="description"></span>
+    </p>
+    <p>
+      Precipitation: <span class="precip"></span>
+    </p>
+
+    <p>
+      Wind (kph): <span class="wind"></span>
+    </p>
+    <img src="../svg/undraw_Browsing_online_re_umsa.svg" alt="" class="svg_img">
+
+  </div>
+
+  <img src="../svg/sunny.png" alt="" class="weather_img">
+
+
+
+  <h2 class="footer_updated">Last Updated: <span class="lupdated"></span></h2>
 
 
 
@@ -106,7 +106,7 @@
 
 
 
-<!-- 
+  <!-- 
   <script>
     //leaflet//
     const mymap = L.map('mapid').setView([0, 0], 1);
@@ -135,8 +135,12 @@
 
 
   </script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
+    integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js"
+    integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="../Javascript/geolocation.js"></script>
 
   <script src="../Javascript/animation.js"></script>
