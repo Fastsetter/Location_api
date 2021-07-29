@@ -13,9 +13,9 @@ window.onload = function () {
         document.getElementById('longitude').textContent = lon.toFixed(4);
 
         const api_url = `/weather/${lat},${lon}`;
-        const map_url=`/geo_map/${lat},${lon}`;
-        const lmap=document.querySelector('#map_location');
-        lmap.href=`/geo_map/${lat},${lon}`;
+        const lmap = document.querySelector('#map_location');
+        lmap.href = `/geo_map/${lat},${lon}`;
+
 
         const res = await fetch(api_url);
         const forecast_res = await res.json();

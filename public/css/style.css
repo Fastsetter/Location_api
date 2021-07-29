@@ -16,27 +16,16 @@
 :root{
   --height:100%;
 }
-html {
-  width: 100%;
-  display: table;
-}
 
-body {
-  width: 100%;
-
-}
 
 html,
 body {
+  width: 100vw;
   position: relative;
   margin: 0;
   padding: 0;
-  background: #70e1f5; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #ffd194,
-    #70e1f5
-  ); /* Chrome 10-25, Safari 5.1-6 */
+
+
   background:linear-gradient(to bottom,white,white,white,rgb(248, 248, 248),rgb(214, 214, 214));
   overflow-x: hidden;
   overflow-y: scroll;
@@ -94,10 +83,6 @@ span {
   bottom: 0%;
 }
 
-.curve2{
-  position: absolute;
-  bottom: 0%;
-}
 
 
 img{
@@ -129,7 +114,7 @@ img{
   display: flex;
   box-shadow: 10px 5px 20px gray;
   border-radius: 15px;
-  justify-content: center;
+  justify-content: space-around;
   backdrop-filter: blur(20rem);
   align-items: center;
   flex-direction: column;
@@ -185,6 +170,15 @@ img{
   color: rgb(255, 78, 78);
 }
 
+.curve2{
+  position: absolute;
+  bottom: 0%;
+  background-color: white;
+  width: 100%;
+  height: 40%;
+  z-index: 0;
+
+}
 
 .second_page{
   position: relative;
@@ -194,10 +188,22 @@ img{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(to bottom right,#7effc9,rgb(80, 252, 214));
+  background: linear-gradient(to bottom,#79ffc0,rgb(55, 255, 178),rgb(55, 255, 178));
   position: absolute;
   bottom: -100%;
   background-color: #ffffff;
+}
+
+.second_page>.curve2>svg{
+  background-color: inherit;
+}
+
+.curve2>.footer_svg{
+  width: 200px;
+  height: auto;
+  position: absolute;
+  left: 10%;
+  top: 50%;
 }
 
 .latlon>p{
@@ -211,7 +217,22 @@ img{
   border-radius: 10px;
   text-decoration: none;
 }
+.footer{
+  height:20%;
+  width: 20%;
+  color: black;
+  z-index: 5;
+  position: absolute;
+  right: 10%;
+  bottom: 0%;
+}
 
+.footer>p{
+  color: black;
+}
+.footer>p>a{
+  color: black;
+}
 
 
 @media screen and (max-width: 655px) {
@@ -219,7 +240,9 @@ img{
   body{
     position: relative;
   }
+
   .latlon{
+    top: 30%;
     width: 80%;
     height: 50%;
   }
@@ -239,6 +262,9 @@ img{
   }
   img{
     display: none;
+  }
+  .footer_svg{
+    display: inline;
   }
   .weather_img{
     display: inline;
