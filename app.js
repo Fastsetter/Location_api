@@ -57,6 +57,7 @@ app.post('/api', async (req, res) => {
       // ------------ Saving Data to Mongo Database -----------------//
       const lat=req.body.lat;
       const lon=req.body.lon;
+      console.log(req.body.name);
       const weather_data = new weather({
             time_stamp: timestamp,
             latitude: req.body.lat,

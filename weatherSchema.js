@@ -2,6 +2,7 @@ const mongoose=require('mongoose');
 
 
 const weather=mongoose.Schema({
+  name:String,
   time_stamp:String,
   latitude:Number,
   longitude:Number,
