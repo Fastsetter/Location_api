@@ -16,6 +16,23 @@
 :root{
   --height:100%;
 }
+::-webkit-scrollbar {
+  border: none;
+  outline: none;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+}
+
+::-webkit-scrollbar-thumb {
+  outline: none;
+  background: rgb(204, 184, 253); 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(163, 24, 255); 
+}
 
 
 html,
@@ -24,11 +41,12 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 
 
   background:linear-gradient(to bottom,white,white,white,rgb(248, 248, 248),rgb(214, 214, 214));
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   z-index: 1;
 }
 
@@ -38,7 +56,7 @@ ul{
 span {
   font-weight: 700;
   font-size: 20px;
-  color: rgb(28, 199, 241);
+  color: rgb(248, 93, 118);
   text-shadow: red;
 }
 .navbar {
@@ -75,7 +93,7 @@ span {
   top: 8%;
   height: 60%;
   width: 100%;
-  background-color: #70e1f5;
+  background-color: #45f5ac;
   left: 0%;
 }
 .curve>svg{
@@ -192,6 +210,8 @@ img{
   position: absolute;
   bottom: -100%;
   background-color: #ffffff;
+  scroll-behavior: smooth;
+
 }
 
 .second_page>.curve2>svg{
@@ -227,11 +247,22 @@ img{
   bottom: 0%;
 }
 
+
 .footer>p{
   color: black;
 }
 .footer>p>a{
   color: black;
+}
+
+.my_name{
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  margin: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
 }
 
 
@@ -260,7 +291,7 @@ img{
     width: 80vw;
     height:50%;
   }
-  img{
+  .svg_img{
     display: none;
   }
   .footer_svg{
