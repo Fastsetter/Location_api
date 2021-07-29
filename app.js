@@ -57,8 +57,8 @@ app.post('/api', async (req, res) => {
       // ------------ Saving Data to Mongo Database -----------------//
       const lat=req.body.lat;
       const lon=req.body.lon;
-      console.log(req.body.name);
       const weather_data = new weather({
+            name:req.body.name,
             time_stamp: timestamp,
             latitude: req.body.lat,
             longitude: req.body.lon,
@@ -68,6 +68,7 @@ app.post('/api', async (req, res) => {
       });
       
       const update=await weather.findOneAndReplace({latitude:lat,longitude:lon},{
+            name:req.body.name,
             time_stamp: timestamp,
             latitude: req.body.lat,
             longitude: req.body.lon,
