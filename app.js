@@ -90,7 +90,11 @@ app.get('/weather/:latlon', async (req, res) => {
       const res_weather = await fetch(weather_url);
       const forecast = await res_weather.json();
       res.json(forecast);
-})
+});
+
+app.get('/geo_map/:latlon',(req,res)=>{
+      res.sendFile(__dirname+'/public/html/map.htm');
+});
 
 
 app.get('/view-checkins',(req,res)=>{
