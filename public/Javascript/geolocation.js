@@ -27,6 +27,8 @@ window.onload = function () {
         // console.log(temp);
         document.querySelector('.weather').textContent = temp.maxtemp_c;
 
+        document.querySelector('.min_temp').textContent=temp.mintemp_c;
+
         document.querySelector('.country').textContent = forecast_res.location.country;
 
         document.querySelector('#name').textContent = forecast_res.location.name;
@@ -35,7 +37,7 @@ window.onload = function () {
 
         document.querySelector('.feelslike').textContent = des.feelslike_c;
 
-        // document.querySelector('.aqi').textContent = des.air_quality['us-epa-index'];
+        document.querySelector('.aqi').textContent = des.air_quality['us-epa-index'];
 
         document.querySelector('.ctemp').textContent = des.temp_c;
 

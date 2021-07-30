@@ -44,7 +44,7 @@ body {
   scroll-behavior: smooth;
 
 
-  background:linear-gradient(to bottom,white,white,white,rgb(248, 248, 248),rgb(214, 214, 214));
+  background:linear-gradient(to bottom,white,white,white,rgb(248, 248, 248),rgb(255, 255, 255));
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 1;
@@ -61,19 +61,22 @@ span {
 }
 .navbar {
   position: sticky;
-  top: 0;
+  top: 0%;
   width: 100vw;
   background: rgba(20, 20, 20, 0.767);
 
   font-family: "Roboto Mono";
   font-style: italic;
   font-weight: 700;
-  height: 8%;
+  height: 5%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   backdrop-filter: blur(20px);
   z-index: 10;
+}
+.navbar>h2>span{
+  color: white;
 }
 
 .navbar > .search {
@@ -91,9 +94,9 @@ span {
 .curve{
   position: absolute;
   top: 8%;
-  height: 60%;
+  height: 30%;
   width: 100%;
-  background-color: #45f5ac;
+  background-color: #ff9f82;
   left: 0%;
 }
 .curve>svg{
@@ -101,20 +104,28 @@ span {
   bottom: 0%;
 }
 
+.bubbles img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+  opacity: 0;
 
-
-img{
+}
+.bubbles{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
   position: absolute;
-  height: 100px;
-  width: auto;
-  bottom: 5%;
-  background-color: white;
-  transform: translate(center);
+  bottom: 0%;
+
+  
 }
 
 .weather_img{
   position: absolute;
   top: 10%;
+  height: 100px;
+  width: auto;
   background: local;
   z-index: 4;
   right: 2%;
@@ -161,12 +172,31 @@ img{
   box-shadow: 7px 4px 10px rgb(58, 58, 58);
   padding: 1rem;
   background: linear-gradient(to bottom,rgb(255, 255, 255),rgb(255, 255, 255));
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
   backdrop-filter: blur(20rem);
   z-index: 1;
 }
 
-.temp > p {
+
+.maxMin{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 100px;
+}
+.maxMin>p{
+  font-size: small;
+}
+.maxMin>span{
+  font-size: small;
+}
+
+p{
   padding: 12px;
   font-size: large;
   font-weight: 500;
@@ -175,6 +205,95 @@ img{
   color: rgb(19, 3, 3);
   font-size: 1.2rem;
 }
+
+.weather_info{
+  width: 60%;
+  height: 40%;
+}
+.weather_info>p{
+  font-weight: 550;
+  font-size: 20px;
+}
+
+
+.circle{
+  position: absolute;
+  bottom: -50%;
+  height: 80%;
+  width: 300%;
+  background-color: rgb(253, 235, 174);
+  border-radius: 100%;
+  animation: circle 7s linear infinite;
+  z-index: -1;
+}
+
+@keyframes circle{
+  0%{
+    transform: translateY(-80%);
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+    
+  }
+  65%{
+    opacity: 1;
+    
+
+  }
+  70%{
+    opacity: 1;
+  }
+  
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes bubble{
+  0%{
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30%{
+    
+    opacity: 1;
+  }
+  70%{
+    
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-80vh);
+    opacity: 0;
+  }
+}
+.bubbles img:nth-child(1){
+  animation-delay: 2s;
+}
+.bubbles img:nth-child(2){
+  animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+  animation-delay: 3s;
+}
+.bubbles img:nth-child(4){
+  animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5){
+  animation-delay: 6s;
+}
+.bubbles img:nth-child(6){
+  animation-delay: 7s;
+}
+.bubbles img:nth-child(7){
+  animation-delay: 4s;
+}
+
+
+
+
+
 
 .footer_updated{
   position: absolute;
@@ -206,7 +325,7 @@ img{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(to bottom,#79ffc0,rgb(55, 255, 178),rgb(55, 255, 178));
+  background: linear-gradient(to bottom,#ffffff,rgb(175, 243, 255),rgb(237, 252, 255));
   position: absolute;
   bottom: -100%;
   background-color: #ffffff;
@@ -266,6 +385,27 @@ img{
 }
 
 
+
+
+
+.third_page{
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom,#ddfdee,rgb(91, 247, 239),rgb(113, 238, 255));
+  bottom: -180%;
+
+  scroll-behavior: smooth;
+
+}
+
+
+
+
 @media screen and (max-width: 655px) {
   
   body{
@@ -274,7 +414,7 @@ img{
 
   .latlon{
     top: 30%;
-    width: 80%;
+    width: 70%;
     height: 50%;
   }
   .navbar>.heading{
@@ -288,7 +428,7 @@ img{
 
 @media screen and (max-width:510px){
   .temp{
-    width: 80vw;
+    width: 70vw;
     height:50%;
   }
   .svg_img{
