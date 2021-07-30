@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   color: rgb(0, 0, 0);
-
+  font-size: 16px;
   font-family: "Lexend", sans-serif;
   font-family: "Montserrat";
   font-style: normal;
@@ -135,7 +135,7 @@ span {
   position: absolute;
   height: 40%;
   width: 40%;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%,-50%);
   padding: 1rem 0px;
@@ -368,15 +368,17 @@ p{
 
 
 .footer>p{
+  font-size: 18px;
   color: black;
 }
 .footer>p>a{
+  font-size: 18px;
   color: black;
 }
 
 .my_name{
   position: absolute;
-  bottom: 0%;
+  bottom: 4%;
   left: 0%;
   margin: 10px;
   font-size: 1rem;
@@ -413,9 +415,9 @@ p{
   }
 
   .latlon{
-    top: 30%;
+    top: 25%;
     width: 80%;
-    height: 50%;
+    height: 40%;
   }
   .navbar>.heading{
    display: none;

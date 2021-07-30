@@ -17,6 +17,7 @@
 
   <title>Document</title>
 
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -53,7 +54,7 @@
 
 
 
-  <div class="temp">
+  <div class="temp" >
 
 
     <img src="cdn.weatherapi.com/weather/64x64/day/356.png" alt="" class="icon1">
@@ -137,7 +138,7 @@
   </div>
 
   <div class="third_page">
-    <div class="latlon">
+    <div class="latlon" >
       
       Latitude: <span id="latitude"></span><br>
       Longitude: <span id="longitude"></span><br>
@@ -169,6 +170,13 @@
 
 
 
+  <!-- our aos -->
+  
+
+
+
+
+
 
 
 
@@ -182,6 +190,13 @@
 
   <script src="../Javascript/animation.js"></script> 
 
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration:1000
+    });
+  </script>
 </body>
 
 </html>
