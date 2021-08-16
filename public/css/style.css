@@ -63,7 +63,7 @@ span {
   position: sticky;
   top: 0%;
   width: 100vw;
-  background: rgba(20, 20, 20, 0.767);
+  background: rgba(20, 20, 20, 0.5);
   height:fit-content;
   font-family: "Roboto Mono";
   font-style: italic;
@@ -90,17 +90,17 @@ span {
   border: 0;
   outline: 0;
   color: rgba(0, 0, 0, 0.664);
-  box-shadow: 3px 1px 10px rgb(255, 102, 102);
+  
 }
 
 
 
 .curve{
   position: absolute;
-  top: 8%;
-  height: 45%;
+  top: 0%;
+  height: 55%;
   width: 100%;
-  background-color: #ff9f82;
+  background-color: #06135e;
   left: 0%;
 }
 .curve>svg{
@@ -430,7 +430,7 @@ p{
    display: none;
   }
   .curve{
-    height: 30%;
+    height: 40%;
   }
 
 }
