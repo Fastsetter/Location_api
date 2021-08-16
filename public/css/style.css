@@ -211,7 +211,7 @@ p{
 }
 
 .weather_info{
-  width: 20vw;
+  width: 50%;
   height: 40%;
 }
 .weather_info>p{
