@@ -79,6 +79,10 @@ span {
   color: white;
 }
 
+.navbar>.heading{
+  font-size: x-large;
+}
+
 .navbar > .search {
   padding: 5px;
   text-align: center;
@@ -94,7 +98,7 @@ span {
 .curve{
   position: absolute;
   top: 8%;
-  height: 30%;
+  height: 45%;
   width: 100%;
   background-color: #ff9f82;
   left: 0%;
@@ -134,7 +138,7 @@ span {
 .latlon{
   position: absolute;
   height: 40%;
-  width: 40%;
+  width: 25%;
   top: 30%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -165,7 +169,7 @@ span {
 .temp {
   position: absolute;
   height: 65%;
-  width: clamp(40%,50%,60%);
+  width:40%;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -207,7 +211,7 @@ p{
 }
 
 .weather_info{
-  width: 60%;
+  width: 20vw;
   height: 40%;
 }
 .weather_info>p{
@@ -362,8 +366,8 @@ p{
   color: black;
   z-index: 5;
   position: absolute;
-  right: 10%;
-  bottom: 10%;
+  right: 0%;
+  bottom: -10%;
 }
 
 
@@ -412,6 +416,9 @@ p{
   
   body{
     position: relative;
+  }
+  .temp{
+    width:50%;
   }
 
   .latlon{
