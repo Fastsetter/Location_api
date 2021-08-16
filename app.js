@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 const { db } = require('./weatherSchema');
 const weather = require('./weatherSchema');
 const port = process.env.PORT || 5000;
-
+require('dotenv').config(); // 
 
 
 // -----------------MIDDLEWARES -----------------//
@@ -14,11 +14,18 @@ const port = process.env.PORT || 5000;
 const app = express();
 app.use(express.static('public'));
 app.use(express.json());
+// console.log(process.env);
+
+
+
+// ------------------------API KEY----------------------//
+
+const mongo_url=process.env.MONGO_URL;
+const weather_api=process.env.API_KEY;
 
 
 //  ---------------------- MONGODB CONNECTION -----------------------//
 
-const mongo_url = 'mongodb+srv://weather_api:fast8301@cluster0.42r4c.mongodb.net/weather_database?retryWrites=true&w=majority';
 mongodb.connect(mongo_url, { useNewUrlParser: true, useUnifiedTopology: true }).catch(error => handleError(error));
 
 //  ----------------------- ROUTES ---------------------//
@@ -87,7 +94,7 @@ app.post('/api', async (req, res) => {
 app.get('/weather/:latlon', async (req, res) => {
       const latlon = req.params.latlon.split(',');
       // console.log(req.params);
-      const weather_url = `https://api.weatherapi.com/v1/forecast.json?key=38519acfd6d64f6cbbd110351211907&aqi=yes&q=${latlon[0]},${latlon[1]}`;
+      const weather_url = `https://api.weatherapi.com/v1/forecast.json?key=${process.env.API_KEY}&aqi=yes&q=${latlon[0]},${latlon[1]}`;
 
       const res_weather = await fetch(weather_url);
       const forecast = await res_weather.json();

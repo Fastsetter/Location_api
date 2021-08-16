@@ -64,11 +64,11 @@ span {
   top: 0%;
   width: 100vw;
   background: rgba(20, 20, 20, 0.767);
-
+  height:fit-content;
   font-family: "Roboto Mono";
   font-style: italic;
   font-weight: 700;
-  height: 5%;
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -423,7 +423,7 @@ p{
    display: none;
   }
   .curve{
-    height: 40%;
+    height: 30%;
   }
 
 }
